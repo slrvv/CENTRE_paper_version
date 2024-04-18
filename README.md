@@ -11,12 +11,8 @@ statistics to complement the cell-type specific information.
 
 - Sara Lopez lopez_s@molgen.mpg.de
 - Trisevgeni Rapakoulia rapakoul@molgen.mpg.de
-
 ### Citation
-Rapakoulia, T., Lopez Ruiz De Vargas, S., Omgba, P. A., Laupert, V., Ulitsky, I., 
-& Vingron, M. (2023). CENTRE: A gradient boosting algorithm for Cell-type-specific 
-ENhancer-Target pREdiction. Bioinformatics, 39(11), btad687. 
-https://doi.org/10.1093/bioinformatics/btad687
+
 
 ## Requirements
 - R (tested 4.0.0)
@@ -56,13 +52,6 @@ tests on the following data sets:
 - Pearson Correlation between CRUP-EP(Enhancer Probability) and CRUP-PP
 (Promoter Probability) across 104 cell types
 
-## Clarification on select chromosome normalization 
-
-The function `CENTRE::computeCellTypeFeatures()` has a parameter called `chr` with 
-which the user can provide a subset of chromosomes for which to quantile normalize.
-This can be used to make the normalization step faster but could change the outcome
-of the function and following predictions. For CENTRE to run as expected the user
-should normalize for all chromosomes and provide genome-wide ChIP-seq data.
 
 ## Installing CENTRE
 ```
