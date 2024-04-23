@@ -1,9 +1,13 @@
-# *CENTRE - Short description*
+# *CENTRE paper version - Short description*
 CENTRE is a machine learning framework that predicts enhancer target 
 interactions in a cell-type-specific manner, using only gene expression and 
 ChIP-seq data for three histone modifications for the cell type of interest.
  CENTRE uses various available datasets and extracts cell-type agnostic 
 statistics to complement the cell-type specific information.
+
+This repository holds the version of CENTRE published in the article under the 
+citation section. For the development version, please check:
+https://github.com/slrvv/CENTRE
 
 ![title](Images/Figure1-export.png)
 
@@ -11,8 +15,12 @@ statistics to complement the cell-type specific information.
 
 - Sara Lopez lopez_s@molgen.mpg.de
 - Trisevgeni Rapakoulia rapakoul@molgen.mpg.de
-### Citation
 
+### Citation
+Rapakoulia, T., Lopez Ruiz De Vargas, S., Omgba, P. A., Laupert, V., Ulitsky, I., 
+& Vingron, M. (2023). CENTRE: A gradient boosting algorithm for Cell-type-specific 
+ENhancer-Target pREdiction. Bioinformatics, 39(11), btad687. 
+https://doi.org/10.1093/bioinformatics/btad687
 
 ## Requirements
 - R (tested 4.0.0)
@@ -62,7 +70,7 @@ devtools::install_git("https://github.com/akbariomgba/crupR.git")
 #Say yes to installing all required dependencies
 
 #Install the development version of CENTRE
-devtools::install_git("https://github.com/slrvv/CENTRE.git")
+devtools::install_git("https://github.com/slrvv/CENTRE_paper_version.git")
 #Say yes to installing all required dependencies
 ```
 Note: If the installation of any of the dependencies of CENTRE fails

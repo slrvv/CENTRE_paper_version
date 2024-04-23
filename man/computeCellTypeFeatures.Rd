@@ -18,6 +18,14 @@ computeCellTypeFeatures(
 \item{metaData}{Dataframe indicating the paths to the ChIP-seq experiments.
 More information on the format here `crupR::normalize}
 
+\item{replicate}{The number of replicates of the ChIP-seq experiments
+that need to be normalized.}
+
+\item{input.free}{Boolean value indicating whether a Control/Input ChIP-seq
+experiment is provided to go with the Histone Modification ChIP-seq experiments.
+If the parameter is set to FALSE the normalization of ChIP-seq experiments
+will be run in input.free mode.}
+
 \item{cores}{Number of cores to compute the CRUP score features}
 
 \item{sequencing}{Type of sequencing of the ChIP-seq experiments "paired" or
@@ -27,14 +35,6 @@ More information on the format here `crupR::normalize}
 one with the names of the genes given as ENSEMBLE ID's}
 
 \item{featuresGeneric}{The output of \code{CENTRE::computeGenericFeatures()}}
-
-\item{replicate:}{The number of replicates of the ChIP-seq experiments
-that need to be normalized.}
-
-\item{input.free:}{Boolean value indicating whether a Control/Input ChIP-seq
-experiment is provided to go with the Histone Modification ChIP-seq experiments.
-If the parameter is set to FALSE the normalization of ChIP-seq experiments
-will be run in input.free mode.}
 }
 \value{
 A table containting the following computed features :
@@ -71,7 +71,7 @@ metaData <- data.frame(HM = c("H3K4me1", "H3K4me3", "H3K27ac"),
                      condition = c(1, 1, 1), replicate = c(1, 1, 1),
                       bamFile = files, inputFile = rep(inputs, 3))
 tpmfile <- read.table(system.file("extdata/example", "HeLa-S3.tsv", package = "CENTRE"),
-                      sep = "", stringsAsFactors = F, header = T)
+                      sep = "", stringsAsFactors = FALSE, header = TRUE)
 celltype_features <- CENTRE::computeCellTypeFeatures(metaData,
                                                     replicate = 1,
                                                     input.free = FALSE,

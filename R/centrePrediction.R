@@ -33,7 +33,7 @@
 #'                      condition = c(1, 1, 1), replicate = c(1, 1, 1),
 #'                       bamFile = files, inputFile = rep(inputs, 3))
 #'tpmfile <- read.table(system.file("extdata/example", "HeLa-S3.tsv", package = "CENTRE"),
-#'                       sep = "", stringsAsFactors = F, header = T)
+#'                       sep = "", stringsAsFactors = FALSE, header = TRUE)
 #'celltype_features <- CENTRE::computeCellTypeFeatures(metaData,
 #'                                                     replicate = 1,
 #'                                                     input.free = FALSE,
